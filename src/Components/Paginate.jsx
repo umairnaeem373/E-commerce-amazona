@@ -4,7 +4,6 @@ import { LinkContainer } from 'react-router-bootstrap'
 
 const Paginate = ({ pages, page, isAdmin = false, keyword = '' }) => {
 
-  console.log(page, 'diwdiuduidui')
 
   return (
     pages > 1 && (
