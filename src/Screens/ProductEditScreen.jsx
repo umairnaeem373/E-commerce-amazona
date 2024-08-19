@@ -11,7 +11,7 @@ import axios from "axios";
 
 const ProductEditScreen = () => {
   const { id: productId } = useParams();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
   const [image, setImage] = useState("");
@@ -20,20 +20,23 @@ const ProductEditScreen = () => {
   const [countInStock, setCountInStock] = useState(0);
   const [description, setDescription] = useState("");
 
-  const [uplaoding , setUploading]=useState(false)
+  const [uplaoding, setUploading] = useState(false);
 
   const dispatch = useDispatch();
 
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
 
-  
-  const productUpdate = useSelector((state) => state.productUpdate)
-  const { loading:loadingUpdate, error:errorUpdate , success:successUpdate } =productUpdate
+  const productUpdate = useSelector((state) => state.productUpdate);
+  const {
+    loading: loadingUpdate,
+    error: errorUpdate,
+    success: successUpdate,
+  } = productUpdate;
 
-  useEffect(()=>{
+  useEffect(() => {
     dispatch(listProductDetails(productId));
-  },[productId])
+  }, [dispatch,productId]);
 
   useEffect(() => {
     if (successUpdate) {
@@ -70,26 +73,26 @@ const ProductEditScreen = () => {
     );
   };
 
-
   const uploadFileHandler = async (e) => {
-    const file = e.target.files[0]
+    const file = e.target.files[0];
     console.log(file);
-    const formData = new FormData()
-    console.log(formData , 'form');
-    formData.append('image', file)
-    setUploading(true)
-
+    const formData = new FormData();
+    formData.append("image", file);
+    setUploading(true);
     try {
       const config = {
         headers: {
-          'Content-Type': 'multipart/form-data',  },}
-      const { data } = await axios.post('/api/upload', formData, config)
-      setImage(data)
-      setUploading(false)
+          "Content-Type": "multipart/form-data",
+        },
+      };
+      const { data } = await axios.post("/api/upload", formData, config);
+      setImage(data);
+      setUploading(false);
     } catch (error) {
-      console.error(error)
-      setUploading(false)
-    }  }
+      console.error(error);
+      setUploading(false);
+    }
+  };
 
   return (
     <>
@@ -98,9 +101,9 @@ const ProductEditScreen = () => {
       </Link>
       <FormContainer>
         <h1>Edit Product</h1>
-        
-        {loadingUpdate && <Loader/>}
-        {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
+
+        {loadingUpdate && <Loader />}
+        {errorUpdate && <Message variant="danger">{errorUpdate}</Message>}
 
         {loading ? (
           <Loader />
@@ -134,8 +137,14 @@ const ProductEditScreen = () => {
                 value={image}
                 onChange={(e) => setImage(e.target.value)}
               ></Form.Control>
-              <input type="file" id="image-file" label='Choose File' custom  onChange={uploadFileHandler} />
-              {uplaoding && <Loader/>}
+              <input
+                type="file"
+                id="image-file"
+                label="Choose File"
+                custom
+                onChange={uploadFileHandler}
+              />
+              {uplaoding && <Loader />}
             </Form.Group>
             <Form.Group controlId="brand">
               <Form.Label>Brand</Form.Label>

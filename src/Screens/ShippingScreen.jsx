@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
-import { getUserDetails, updateUserProfile } from "../Actions/userActions";
 import { useDispatch, useSelector } from "react-redux";
 import FormContainer from "../Components/FormContainer";
 import { saveShippingAddress } from "../Actions/cartActions";

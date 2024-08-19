@@ -51,7 +51,7 @@ function ProductScreen() {
 
   useEffect(()=>{
     dispatch({ type: PRODUCT_CREATE_REVIEW_RESET });
-  },[])
+  },[dispatch])
 
   const addToCartHandler = () => {
     navigate(`/cart/${id}?qty=${qty}`);
