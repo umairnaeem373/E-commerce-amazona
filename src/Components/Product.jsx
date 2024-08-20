@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 import Rating from "./Rating";
 
 function Product({ product }) {
+  console.log(product)
   return (
     <Card className="my-3 p-3 rounded">
       <Card.Body>
         <Link to={`/product/${product._id}`}>
-          <Card.Img src={product.image} alt={product.name} variant="top" />
+          <Card.Img src={`${process.env.PUBLIC_URL}/${product.image}`} alt={product.name} variant="top" />
           <Card.Title as="div">
             <strong>{product.name}</strong>
           </Card.Title>
