@@ -134,7 +134,7 @@ function OrderScreen() {
                       <Row>
                         <Col md={1}>
                           <Image
-                            src={item.image}
+                            src={process.env.PUBLIC_URL+item.image}
                             alt={item.name}
                             fluid
                             rounded
