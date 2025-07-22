@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/amazona/static/css/main.57fa205a.css",
-    "main.js": "/amazona/static/js/main.707670ec.js",
-    "static/js/453.ef2b58b1.chunk.js": "/amazona/static/js/453.ef2b58b1.chunk.js",
-    "static/media/redux.cjs": "/amazona/static/media/redux.7edfc461ab353f1712ab.cjs",
-    "index.html": "/amazona/index.html",
-    "main.57fa205a.css.map": "/amazona/static/css/main.57fa205a.css.map",
-    "main.707670ec.js.map": "/amazona/static/js/main.707670ec.js.map",
-    "453.ef2b58b1.chunk.js.map": "/amazona/static/js/453.ef2b58b1.chunk.js.map"
+    "main.css": "/E-commerce-amazona/static/css/main.57fa205a.css",
+    "main.js": "/E-commerce-amazona/static/js/main.31e48b4e.js",
+    "static/js/453.ef2b58b1.chunk.js": "/E-commerce-amazona/static/js/453.ef2b58b1.chunk.js",
+    "static/media/redux.cjs": "/E-commerce-amazona/static/media/redux.7edfc461ab353f1712ab.cjs",
+    "index.html": "/E-commerce-amazona/index.html",
+    "main.57fa205a.css.map": "/E-commerce-amazona/static/css/main.57fa205a.css.map",
+    "main.31e48b4e.js.map": "/E-commerce-amazona/static/js/main.31e48b4e.js.map",
+    "453.ef2b58b1.chunk.js.map": "/E-commerce-amazona/static/js/453.ef2b58b1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.57fa205a.css",
-    "static/js/main.707670ec.js"
+    "static/js/main.31e48b4e.js"
   ]
 }
