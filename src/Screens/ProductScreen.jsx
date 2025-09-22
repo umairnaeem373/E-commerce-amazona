@@ -83,7 +83,6 @@ function ProductScreen() {
   const y = Array.from(x);
   //   const keysArray = Array(7).keys();
   // console.log(Array.from(keysArray))
-  console.log(y, x);
   return (
     <>
       <Link className="btn btn-light my-3" to="/">
