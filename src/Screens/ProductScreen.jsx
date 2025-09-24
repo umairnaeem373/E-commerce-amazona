@@ -72,7 +72,7 @@ function ProductScreen() {
   // ,'keys')
   // .map((ele,x)=>{
   //   console.log(ele,x,'x')
-  // }),'fook Linda')
+  // }))
 
   // ma.map((ele,x)=>{
   //     console.log(ele,x,'x')
