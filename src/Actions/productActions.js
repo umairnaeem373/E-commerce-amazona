@@ -121,7 +121,6 @@ export const createProduct = () => async (dispatch, getState) => {
 };
 
 export const updateProduct = (product) => async (dispatch, getState) => {
-  console.log(product, "updateProduct");
   try {
     dispatch({
       type: PRODUCT_UPDATE_REQUEST,
@@ -129,7 +128,6 @@ export const updateProduct = (product) => async (dispatch, getState) => {
     const {
       userLogin: { userInfo },
     } = getState();
-    // console.log(userInfo,userLogin,'ProDuct Update usersss')
     const config = {
       headers: {
         "content-type": "application/json",
